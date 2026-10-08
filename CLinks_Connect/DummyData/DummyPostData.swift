@@ -21,7 +21,7 @@ let dummyPosts: [postModel] = [
                 timestamp: "45m ago"
             )
         ],
-        imageName: "campus_evening"
+        imageName: "CCFID_381073_2022181223017_IMAGE"
     ),
 
     postModel(
@@ -45,7 +45,7 @@ let dummyPosts: [postModel] = [
                 timestamp: "2h ago"
             )
         ],
-        imageName: nil
+        imageName: "CCFID_381241_2022182061050_IMAGE"
     ),
 
     postModel(
@@ -69,7 +69,7 @@ let dummyPosts: [postModel] = [
                 timestamp: "4h ago"
             )
         ],
-        imageName: "library"
+        imageName: "CCFID_382680_2022183131344_IMAGE-2"
     ),
 
     postModel(
@@ -93,7 +93,7 @@ let dummyPosts: [postModel] = [
                 timestamp: "6h ago"
             )
         ],
-        imageName: "club_event"
+        imageName: "CCFID_382787_2022183144512_IMAGE"
     ),
 
     postModel(
@@ -117,7 +117,7 @@ let dummyPosts: [postModel] = [
                 timestamp: "8h ago"
             )
         ],
-        imageName: "food_court"
+        imageName: "CCFID_383353_2022184014837_IMAGE"
     ),
 
     postModel(
@@ -141,7 +141,7 @@ let dummyPosts: [postModel] = [
                 timestamp: "Yesterday"
             )
         ],
-        imageName: "sports"
+        imageName: "CCFID_382680_2022183131344_IMAGE-2"
     ),
 
     postModel(
@@ -165,7 +165,7 @@ let dummyPosts: [postModel] = [
                 timestamp: "Yesterday"
             )
         ],
-        imageName: "coding_lab"
+        imageName: nil
     ),
 
     postModel(
@@ -189,7 +189,7 @@ let dummyPosts: [postModel] = [
                 timestamp: "2d ago"
             )
         ],
-        imageName: "coding_lab"
+        imageName: nil
     ),
 
     postModel(
@@ -213,7 +213,7 @@ let dummyPosts: [postModel] = [
                 timestamp: "2d ago"
             )
         ],
-        imageName: "sunset"
+        imageName: nil
     ),
 
     postModel(
@@ -237,6 +237,6 @@ let dummyPosts: [postModel] = [
                 timestamp: "3d ago"
             )
         ],
-        imageName: "academic_block"
+        imageName: nil
     )
 ]
