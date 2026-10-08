@@ -11,7 +11,6 @@ struct postView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                // Dark Gradient Background
                 LinearGradient(
                     gradient: Gradient(colors: [
                         Color(red: 0.08, green: 0.09, blue: 0.15),
@@ -60,14 +59,6 @@ struct postView: View {
 
                                 Spacer()
 
-                                Image(systemName: "slider.horizontal.3")
-                                    .font(.system(size: 20, weight: .semibold))
-                                    .foregroundStyle(.cyan)
-                                    .frame(width: 44, height: 44)
-                                    .background(
-                                        Circle()
-                                            .fill(Color.cyan.opacity(0.1))
-                                    )
                             }
                             .padding(.top, 8)
                             .padding(.bottom, 12)

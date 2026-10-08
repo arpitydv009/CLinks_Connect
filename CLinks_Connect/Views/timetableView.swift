@@ -23,27 +23,60 @@ struct timetableView: View {
                 .ignoresSafeArea()
                 
                 List {
-                    ForEach(days, id: \.self) { day in
-                        NavigationLink {
-                            dayTimetableView(day: day)
-                        } label: {
-                            HStack {
-                                Text(day)
-                                    .font(.system(size: 22, weight: .semibold))
-                                    .foregroundStyle(.white)
-                                Spacer()
+                    Section{
+                        ForEach(days, id: \.self) { day in
+                            NavigationLink {
+                                dayTimetableView(day: day)
+                            } label: {
+                                HStack {
+                                    Text(day)
+                                        .font(.system(size: 22, weight: .semibold))
+                                        .foregroundStyle(.white)
+                                    Spacer()
+                                }
+                                .padding(23)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .fill(Color(red: 0.15, green: 0.16, blue: 0.22))
+                                )
                             }
-                            .padding(23)
-                            .background(
-                                RoundedRectangle(cornerRadius: 16)
-                                    .fill(Color(red: 0.15, green: 0.16, blue: 0.22))
+                            .listRowInsets(
+                                EdgeInsets(top: 6, leading: 16, bottom: 6, trailing: 16)
                             )
+                            .listRowBackground(Color.clear)
+                            .listRowSeparator(.hidden)
                         }
-                        .listRowInsets(
-                            EdgeInsets(top: 6, leading: 16, bottom: 6, trailing: 16)
-                        )
+                    } header: {
+                        VStack(alignment: .leading, spacing: 12) {
+                            HStack {
+                                VStack(alignment: .leading, spacing: 8) {
+                                    Text("Time Table")
+                                        .font(.system(size: 37, weight: .bold))
+                                        .foregroundStyle(
+                                            LinearGradient(
+                                                gradient: Gradient(colors: [.cyan, .blue]),
+                                                startPoint: .leading,
+                                                endPoint: .trailing
+                                            )
+                                        )
+
+                                    Text("This week's routine")
+                                        .font(.system(size: 18, weight: .regular))
+                                        .foregroundStyle(.gray)
+                                }
+
+                                Spacer()
+
+                            }
+                            .padding(.top, 8)
+                            .padding(.bottom, 12)
+
+                            Divider()
+                                .background(Color.white.opacity(0.1))
+                        }
+                        .padding(.horizontal, 20)
+                        .textCase(nil)
                         .listRowBackground(Color.clear)
-                        .listRowSeparator(.hidden)
                     }
                 }
                 .listStyle(.plain)
