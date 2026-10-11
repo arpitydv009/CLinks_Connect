@@ -507,7 +507,7 @@ struct postView: View {
                             .contentTransition(.numericText())
                     }
                     
-                    HStack(spacing: 4) {
+                    /*HStack(spacing: 4) {
                         Image(systemName: "bubble.right.fill")
                             .font(.system(size: 12, weight: .semibold))
                             .foregroundStyle(.cyan)
@@ -515,7 +515,7 @@ struct postView: View {
                         Text("\(post.comments)")
                             .font(.system(size: 12))
                             .foregroundStyle(.gray)
-                    }
+                    }*/
                     
                     Spacer()
                 }
