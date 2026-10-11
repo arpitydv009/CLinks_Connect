@@ -1,4 +1,4 @@
-import SwiftUI
+/*import SwiftUI
 
 struct discussionView: View {
     var body: some View {
@@ -318,3 +318,4 @@ struct discussionDetailView: View {
 #Preview {
     discussionView()
 }
+*/

@@ -1,4 +1,4 @@
-let dummyDiscussions: [discussionModel] = [
+/*let dummyDiscussions: [discussionModel] = [
     discussionModel(
         id: 1,
         title: "Which language should I use for DSA?",
@@ -63,3 +63,4 @@ let dummyDiscussions: [discussionModel] = [
         timestamp: "4h ago", author: "Piastri"
     )
 ]
+*/
