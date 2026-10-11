@@ -16,20 +16,6 @@ struct ProfileRecord: Decodable {
 
 struct PostService {
     let client = SupabaseManager.shared.client
-
-    // MARK: - Fetch Posts
-
-    func fetchPosts() async throws -> [PostRecord] {
-        let posts: [PostRecord] = try await client
-            .from("posts")
-            .select()
-            .order("created_at", ascending: false)
-            .execute()
-            .value
-
-        return posts
-    }
-
     // MARK: - Fetch Profiles
 
     func fetchProfiles() async throws -> [ProfileRecord] {
@@ -42,8 +28,18 @@ struct PostService {
         return profiles
     }
 
-    // MARK: - Create Posts
+    // MARK: -  Posts
+    func fetchPosts() async throws -> [PostRecord] {
+        let posts: [PostRecord] = try await client
+            .from("posts")
+            .select()
+            .order("created_at", ascending: false)
+            .execute()
+            .value
 
+        return posts
+    }
+    
     private struct NewPost: Encodable {
         let author_id: UUID
         let content: String
@@ -95,6 +91,7 @@ struct PostService {
             .execute()
     }
 
+    
     // MARK: - Likes
 
     struct LikeRecord: Decodable {
@@ -136,6 +133,55 @@ struct PostService {
             .delete()
             .eq("post_id", value: postID.uuidString)
             .eq("user_id", value: userID.uuidString)
+            .execute()
+    }
+    
+    
+    // MARK: - Comments
+    
+    struct CommentRecord: Decodable, Identifiable{
+        let id: UUID
+        let post_id: UUID
+        let author_id: UUID
+        let content: String
+        let created_at: String
+        let parent_comment_id: UUID?
+        
+    }
+    
+    struct NewComment: Encodable {
+        let post_id: UUID
+        let author_id: UUID
+        let content: String
+        let parent_comment_id: UUID?
+    }
+    
+    func fetchComments(postID: UUID) async throws -> [CommentRecord] {
+        try await client
+            .from("comments")
+            .select()
+            .eq("post_id", value: postID)
+            .order("created_at", ascending: true)
+            .execute()
+            .value
+    }
+    
+    func createComment(
+        postID: UUID,
+        authorID: UUID,
+        content: String,
+        parentCommentID: UUID? = nil
+    ) async throws {
+        let newComment = NewComment(
+            post_id: postID,
+            author_id: authorID,
+            content: content,
+            parent_comment_id: parentCommentID
+        )
+
+        try await client
+            .from("comments")
+            .insert(newComment)
             .execute()
     }
 }

@@ -334,10 +334,8 @@ struct postView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
-            .onAppear {
-                Task {
-                    await loadPosts()
-                }
+            .task{
+                await loadPosts()
             }
         }
     }
@@ -592,6 +590,8 @@ struct postView: View {
             }
         }
         
+        
+        //MARK: - Formats Time
         private func formattedTimestamp(_ timestamp: String) -> String {
             let formatter = ISO8601DateFormatter()
 
