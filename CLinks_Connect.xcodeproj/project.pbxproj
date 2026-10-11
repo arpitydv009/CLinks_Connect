@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BAA5C4C307BE7FB00015C7E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2BAA5C4B307BE7FB00015C7E /* README.md */; };
 		2BABED0F307A2A5F003FA17C /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 2BABED0E307A2A5F003FA17C /* Auth */; };
 		2BABED11307A2A5F003FA17C /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 2BABED10307A2A5F003FA17C /* Functions */; };
 		2BABED13307A2A5F003FA17C /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 2BABED12307A2A5F003FA17C /* PostgREST */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		2B1CDC963076AC4E00350A22 /* CLinks_Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLinks_Connect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BAA5C4B307BE7FB00015C7E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -49,6 +51,7 @@
 			children = (
 				2B1CDC983076AC4E00350A22 /* CLinks_Connect */,
 				2B1CDC973076AC4E00350A22 /* Products */,
+				2BAA5C4B307BE7FB00015C7E /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BAA5C4C307BE7FB00015C7E /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
