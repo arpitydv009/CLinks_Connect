@@ -1,4 +1,4 @@
-let dummyPosts: [postModel] = [
+/* let dummyPosts: [postModel] = [
 
     postModel(
         id: 1,
@@ -239,4 +239,4 @@ let dummyPosts: [postModel] = [
         ],
         imageName: nil
     )
-]
+] */

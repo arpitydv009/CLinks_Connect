@@ -11,22 +11,22 @@ struct MainTabView: View {
     var body: some View {
         TabView {
             // Home Tab
-            HomeView()
+           /* HomeView()
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
-                }
+                }*/
             
             // Posts Tab
             postView()
                 .tabItem {
-                    Label("Posts", systemImage: "doc.text.fill")
+                    Label("Home", systemImage: "house.fill")
                 }
             
-            // Discussion Tab
+           /* // Discussion Tab
             discussionView()
                 .tabItem {
                     Label("Discussions", systemImage: "message.badge")
-                }
+                }*/
             
             // Timetable Tab
             timetableView()

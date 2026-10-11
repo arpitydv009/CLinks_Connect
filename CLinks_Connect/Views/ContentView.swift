@@ -16,7 +16,7 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
-
+/*
 // MARK: - Home View
 struct HomeView: View {
     let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
@@ -54,16 +54,7 @@ struct HomeView: View {
                                         .font(.system(size: 14, weight: .regular))
                                         .foregroundStyle(.gray)
                                 }
-                                Spacer()
-                                
-                                Image(systemName: "bell.badge.fill")
-                                    .font(.system(size: 20, weight: .semibold))
-                                    .foregroundStyle(.cyan)
-                                    .frame(width: 44, height: 44)
-                                    .background(
-                                        Circle()
-                                            .fill(Color.cyan.opacity(0.1))
-                                    )
+                               
                             }
                         }
                         .padding(.horizontal, 20)
@@ -135,7 +126,7 @@ struct HomeView: View {
             .navigationBarTitleDisplayMode(.inline)
         }
     }
-    
+    */
     // Helper function to get next class
     private func getNextClass() -> timetableEntry? {
         let calendar = Calendar.current
@@ -212,7 +203,7 @@ struct HomeView: View {
         default: return ""
         }
     }
-}
+
 
 // MARK: - Latest Post Card
 struct latestPostCard: View {
@@ -539,3 +530,4 @@ struct PlaceholderView: View {
         }
     }
 }
+
